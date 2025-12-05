@@ -1,0 +1,36 @@
+# Binaries for programs
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, generated with go test -c
+*.test
+
+# Output of the go build command
+# For example, after running go build -o myprogram
+myprogram
+# Or, for the default output (in the current directory)
+# For a program named 'myprogram.go' -> './myprogram' or '.\myprogram.exe'
+/[a-zA-Z0-9]*
+
+# Environment and configuration files
+.env
+.DS_Store # macOS
+Thumbs.db # Windows
+
+# Directories
+[Dd]ist/ # Compiled code
+[Bb]in/ # Compiled code
+pkg/   # Go modules metadata
+
+# Vendor directory (optional, only if not using Go modules vendoring)
+# Comment this out if you need to commit vendor/
+# vendor/
+
+# IDE/Editor specific files and directories (optional, consider a global gitignore instead)
+.idea/         # IntelliJ/GoLand
+.vscode/       # VS Code
+*.sublime-project
+*.sublime-workspace
