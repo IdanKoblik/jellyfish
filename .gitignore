@@ -12,8 +12,6 @@
 # For example, after running go build -o myprogram
 myprogram
 # Or, for the default output (in the current directory)
-# For a program named 'myprogram.go' -> './myprogram' or '.\myprogram.exe'
-/[a-zA-Z0-9]*
 
 # Environment and configuration files
 .env
