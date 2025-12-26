@@ -10,9 +10,9 @@ import (
 )
 
 type NotificationRequest struct {
-	DeviceID    string   `json:"device_id"`
-	Message     string   `json:"message"`
-	Subscribers []string `json:"subscribers"`
+	DeviceID string   `json:"device"`
+	Message  string   `json:"message"`
+	Targets  []string `json:"targets"`
 }
 
 func SendNotification(cfg *Config, title string, notification *Notification) error {
@@ -20,9 +20,9 @@ func SendNotification(cfg *Config, title string, notification *Notification) err
 
 	message := BuildSMSMessage(title, notification)
 	reqBody := NotificationRequest{
-		DeviceID:    cfg.DeviceID,
-		Message:     message,
-		Subscribers: []string{ExtractPrefix(notification.Request.RequestedByEmail)},
+		DeviceID: cfg.DeviceID,
+		Message:  message,
+		Targets:  []string{ExtractPrefix(notification.Request.RequestedByEmail)},
 	}
 
 	data, err := json.Marshal(reqBody)
